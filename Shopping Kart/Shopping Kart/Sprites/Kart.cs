@@ -25,13 +25,13 @@ namespace Shopping_Kart.Sprites
         private Vector2 _moveDirection;
         private Vector2 _lookDirection;
 
-        public float RotationSpeed = 3f;
+        public float RotationSpeed = 4f;
 
-        public float MaxSpeed = 30f;
-        public float Acceleration = 0.8f;
-        public float AccelerationGap = 0.15f;
+        public float MaxSpeed = 8f;
+        public float Acceleration = 1.1f;
+        public float AccelerationGap = 0.1f;
 
-        public float Brake = 0.75f;
+        public float Brake = 1.25f;
         public float BrakeGap = 0.1f;
 
         public Input Input;
@@ -119,7 +119,7 @@ namespace Shopping_Kart.Sprites
                 _accelerationTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (_speed > 0 && _accelerationTimer >= AccelerationGap)
                 {
-                    _speed -= Acceleration;
+                    _speed = Math.Max(_speed - Acceleration, 0);
                     _accelerationTimer = 0;
                 }
             }
@@ -134,7 +134,7 @@ namespace Shopping_Kart.Sprites
                 _brakeTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (_speed > 0 && _brakeTimer >= BrakeGap)
                 {
-                    _speed -= Brake;
+                    _speed = Math.Max(_speed - Brake, 0);
                     _brakeTimer = 0;
                 }
             }

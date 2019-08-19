@@ -38,9 +38,6 @@ namespace Shopping_Kart
             ScreenWidth = graphics.PreferredBackBufferWidth;
             ScreenHeight = graphics.PreferredBackBufferHeight;
 
-            // Fullscreen
-            graphics.IsFullScreen = true;
-
             base.Initialize();
         }
 
@@ -103,7 +100,7 @@ namespace Shopping_Kart
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.DarkSlateGray);
 
             spriteBatch.Begin();
 
