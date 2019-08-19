@@ -1,0 +1,20 @@
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\Content\Cart.xnb
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\Shopping Kart.exe
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\Shopping Kart.pdb
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\obj\Debug\Shopping Kart.csprojAssemblyReference.cache
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\obj\Debug\Shopping Kart.csproj.CoreCompileInputs.cache
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\obj\Debug\Shopping Kart.csproj.CopyComplete
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\obj\Debug\Shopping Kart.exe
+C:\Users\Juan\Documents\monojuegos\shopping-kart\Shopping Kart\Shopping Kart\obj\Debug\Shopping Kart.pdb
