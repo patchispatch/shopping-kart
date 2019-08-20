@@ -20,20 +20,34 @@ namespace Shopping_Kart.Sprites
 
         private float _accelerationTimer = 0;
         private float _brakeTimer = 0;
+        private float _residualTimer = 0;
+
+        // Speed and direction of current movement
+        private Vector2 _moveDirection;
         private float _speed;
 
-        private Vector2 _moveDirection;
+        // Speed and direction of previous movement (residual speed)
+        private Vector2 _residualDirection;
+        private float _residualSpeed;
+
+        // Pointing upfront the kart
         private Vector2 _lookDirection;
 
-        public float RotationSpeed = 4f;
+        public float RotationSpeed = 3.5f;
 
-        public float MaxSpeed = 8f;
+        // TO DO: friction system
+        // These below are provisional
+
+        // Acceleration values
+        public float MaxSpeed = 7f;
         public float Acceleration = 1.1f;
         public float AccelerationGap = 0.1f;
 
-        public float Brake = 1.25f;
+        // Braking values
+        public float Brake = 1.8f;
         public float BrakeGap = 0.1f;
 
+        // Controls (keyboard only for now)
         public Input Input;
         #endregion
 
@@ -45,6 +59,9 @@ namespace Shopping_Kart.Sprites
             _moveDirection = _lookDirection;
 
             _layer = 0f;
+
+            // Scale of the sprite
+            _scale = 0.5f;
         }
 
         public override void Update(GameTime gameTime)
@@ -69,7 +86,7 @@ namespace Shopping_Kart.Sprites
             Change_lookDirection();
 
             // Update the kart's position
-            Position += (_moveDirection * _speed);
+            Position += (_moveDirection * _speed) + (_residualDirection * _residualSpeed);
 
             // Clamp position to window
             Position = Vector2.Clamp(Position, new Vector2(_texture.Width / 2, _texture.Height / 2), 
@@ -115,27 +132,38 @@ namespace Shopping_Kart.Sprites
             // If not pushing
             if(_currentKey.IsKeyUp(Input.Accelerate))
             {
-                // If moving, deccelerate until zero at a certain frequence
-                _accelerationTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (_speed > 0 && _accelerationTimer >= AccelerationGap)
+                // Only first time
+                if (_previousKey.IsKeyDown(Input.Accelerate))
                 {
-                    _speed = Math.Max(_speed - Acceleration, 0);
-                    _accelerationTimer = 0;
+                    // Speed becomes residual
+                    _residualSpeed = _speed;
+                    _residualDirection = _moveDirection;
+                    _speed = 0;
                 }
             }
         }
 
-        // TO DO: it doesn't fully brake, fix it
+        // Thinking about removing the brake
         private void Braking(GameTime gameTime)
         {
             // If pushing
             if (_currentKey.IsKeyDown(Input.Brake))
             {
                 _brakeTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (_speed > 0 && _brakeTimer >= BrakeGap)
+                if (_residualSpeed > 0 && _brakeTimer >= BrakeGap)
                 {
-                    _speed = Math.Max(_speed - Brake, 0);
+                    _residualSpeed = Math.Max(_residualSpeed - Brake, 0);
                     _brakeTimer = 0;
+                }
+            }
+            else
+            {
+                // Deccelerate slower
+                _residualTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (_residualSpeed > 0 && _residualTimer >= BrakeGap)
+                {
+                    _residualSpeed = Math.Max(_residualSpeed - Acceleration, 0);
+                    _residualTimer = 0;
                 }
             }
         }
